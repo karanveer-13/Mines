@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mines</title>
+    <style>
+        body{
+            background-color: #1c1b1b;
+        }
+        h1{
+            font-size: 60px;
+            text-align: center;
+            color: #238735;
+        }
+        img{
+            height: 111px;
+            width: 111px;
+            margin-bottom: 90px;
+        }
+        button{
+            background-color: #403d3d;
+            height: 200px;
+            width: 200px;
+            transition: background-color 0.25s;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        #submit{
+            font-size: larger;
+            height: 45px;
+            width: 120px;
+            border-radius: 5px;
+            background-color: #238735;
+            color: white;
+            transition: background-color 0.25s;
+        }
+        #submit:hover{
+            background-color: #11501c;
+            color: white;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: grey;
+            transform: scale(1.03);
+        }
+        div{
+            text-align: center;  
+        }
+        #ip{
+            color: #238735;
+            font-size: 25px;
+        }
+        select{
+            color: lightgray;
+            padding: 5px;
+            background-color: black;
+            border-radius: 15px;
+            width: 50px;
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mines</h1>
+    <div id="ip">
+        <form>
+        Matrix: <select id="matrix" size="1"><option value="3">3</option><option value="4">4</option></select> Mines: <select id="mines" size="1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select> <br><br>
+        <button id="submit">Go</button>
+        </form>
+    </div><br><br>
+    <div id="playarea">
+        <button id="btn1" disabled></button>  <button id="btn2" disabled></button>  <button id="btn3" disabled></button> <br><br>
+        <button id="btn4" disabled></button>  <button id="btn5" disabled></button>  <button id="btn6" disabled></button> <br><br>
+        <button id="btn7" disabled></button>  <button id="btn8" disabled></button>  <button id="btn9" disabled></button> <br><br>
+    </div>
+    <script src="mines.js"></script>
+</body>
+</html>
