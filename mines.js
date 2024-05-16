@@ -24,7 +24,7 @@ minesound.src = "Small Bomb Explosion Sound Effect.mp3";
 
 document.addEventListener("DOMContentLoaded", function() {
     
-
+    sb();
     document.getElementById("submit").onclick = function(event){
         sb();
 
