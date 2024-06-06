@@ -4,6 +4,17 @@ function getRandomNumber(min, max) {
   
   var m = getRandomNumber(1, 9);
   
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+function showMobileMessage() {
+    if (isMobileDevice()) {
+        document.getElementById('mobileMessage').innerHTML = 'Please use desktop site version on mobile for a more immersive experience 😐😊';
+    }
+}
+
+
   m = String(m);
   var n=3;
   var max;
@@ -22,6 +33,7 @@ minesound.src = "Small Bomb Explosion Sound Effect.mp3";
 
 document.addEventListener("DOMContentLoaded", function() {
     
+    showMobileMessage();
     sb();
     document.getElementById("submit").onclick = function(event){
         sb();
@@ -35,7 +47,6 @@ function disableOtherButtons() {
 
             buttons["btn"+i].disabled = true;
             buttons["btn1"].disabled = true;
-            console.log("lols");
     };
 };
 
@@ -61,7 +72,6 @@ function sb(){
         n = document.getElementById("matrix").value;
         mines = document.getElementById("mines").value;
 
-        console.log(n);
         if(n == 3) {
             document.getElementById("playarea").innerHTML = "<button id='btn1'></button>  <button id='btn2'></button>  <button id='btn3'></button> <br><br><button id='btn4'></button>  <button id='btn5'></button>  <button id='btn6'></button> <br><br><button id='btn7'></button>  <button id='btn8'></button>  <button id='btn9'></button> <br><br>";
             max = 9;
@@ -96,7 +106,6 @@ function sb(){
                 arr2[0]=arr1[m];
                 arr1.splice(m,1);
                 var b = String(arr2[0]);
-                console.log("mines at "+b+" ");
                 setupButtonHandlers();
                 document.getElementById("btn"+b).onclick = function(){
                  minesound.play();
@@ -115,7 +124,6 @@ function sb(){
                 arr1.splice(m,1);
             }
 
-                console.log("mine at "+arr2);
                 setupButtonHandlers();
                 var h;
                 for(h=0; h<arr2.length; h++)
