@@ -3,9 +3,7 @@ function getRandomNumber(min, max) {
   }
   
   var m = getRandomNumber(1, 9);
-      
   
-
   m = String(m);
   var n=3;
   var max;
@@ -62,24 +60,34 @@ function sb(){
         event.preventDefault();
         n = document.getElementById("matrix").value;
         mines = document.getElementById("mines").value;
+
         console.log(n);
         if(n == 3) {
             document.getElementById("playarea").innerHTML = "<button id='btn1'></button>  <button id='btn2'></button>  <button id='btn3'></button> <br><br><button id='btn4'></button>  <button id='btn5'></button>  <button id='btn6'></button> <br><br><button id='btn7'></button>  <button id='btn8'></button>  <button id='btn9'></button> <br><br>";
             max = 9;
             arr1 = [1,2,3,4,5,6,7,8,9];
             l = arr1.length
+
         }
         else if(n == 4) {
             document.getElementById("playarea").innerHTML = "<button id='btn1'></button>  <button id='btn2'></button>  <button id='btn3'></button> <button id='btn4'></button> <br><br> <button id='btn5'></button>  <button id='btn6'></button> <button id='btn7'></button> <button id='btn8'></button> <br><br> <button id='btn9'></button> <button id='btn10'></button> <button id='btn11'></button> <button id='btn12'></button><br><br> <button id='btn13'></button> <button id='btn14'></button> <button id='btn15'></button> <button id='btn16'></button> <br><br>";
             max = 16;
             arr1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
             l = arr1.length
-            for(var i=1; i<max+1; i++)
-            {
-                document.getElementById("btn"+i).style.width = "150px";
-                document.getElementById("btn"+i).style.height = "150px";
-            }
+
         }
+        else if(n == 5) {
+             document.getElementById("playarea").innerHTML = "<button id='btn1'></button>  <button id='btn2'></button>  <button id='btn3'></button>  <button id='btn4'></button>  <button id='btn5'></button> <br><br> <button id='btn6'></button>  <button id='btn7'></button>  <button id='btn8'></button>  <button id='btn9'></button>  <button id='btn10'></button> <br><br> <button id='btn11'></button>  <button id='btn12'></button>  <button id='btn13'></button>  <button id='btn14'></button>  <button id='btn15'></button> <br><br> <button id='btn16'></button>  <button id='btn17'></button>  <button id='btn18'></button>  <button id='btn19'></button>  <button id='btn20'></button> <br><br> <button id='btn21'></button>  <button id='btn22'></button>  <button id='btn23'></button>  <button id='btn24'></button>  <button id='btn25'></button> <br><br>";
+             max = 25;
+             arr1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+             l = arr1.length;
+             for(var i=1; i<max+1; i++) {
+                 document.getElementById("btn"+i).style.width = "100px";
+                 document.getElementById("btn"+i).style.height = "100px";
+             }
+          }
+
+
         min = 1;
         if(mines==1)
         {
