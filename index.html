@@ -6,45 +6,49 @@
     <title>Mines</title>
     <style>
         body{
-            background-color: #1c1b1b;
+            background-color: #0f212e;
         }
         h1{
             font-size: 60px;
+            font-family: serif, Georgia, 'Times New Roman', Times, serif;
             text-align: center;
-            color: #238735;
+            color: #eafaed;
         }
         img{
-            height: 111px;
-            width: 111px;
-            margin-bottom: 90px;
+            height: 61px;
+            width: 61px;
+            padding-bottom: 34px;
         }
         button{
-            background-color: #403d3d;
-            height: 200px;
-            width: 200px;
+            background-color: #2f4553;
+            height: 100px;
+            width: 100px;
             transition: background-color 0.25s;
             border-radius: 10px;
             cursor: pointer;
             overflow: hidden;
+            position: relative;
+
         }
         #submit{
             font-size: larger;
             height: 45px;
             width: 120px;
             border-radius: 5px;
-            background-color: #238735;
-            color: white;
+            background-color: #0ddf0d;
+            color: black;
             transition: background-color 0.25s;
         }
-        #submit:hover{
-            background-color: #11501c;
-            color: white;
-            border-radius: 10px;
-        }
         button:hover{
-            background-color: grey;
-            transform: scale(1.03);
+            background-color: #557086;
+            /* transform: scale(1.03); */
+            transform: translateY(-7px);
         }
+        #submit:hover{
+            background-color: #1fff20;
+            /* border-radius: 10px; */
+        }
+
         div{
             text-align: center;  
         }
@@ -60,13 +64,24 @@
             width: 50px;
             border-color: white;
         }
+        #playarea{
+            height: fit-content;
+            align-items: center;
+            align-self: center;
+            align-content: center;
+        }
+        button{
+            -webkit-box-shadow: 0px 8px 1px 0px rgb(33, 55, 67);
+            -moz-box-shadow: 0px 8px 1px 0px rgb(33, 55, 67);
+            box-shadow: 0px 8px 1px 0px rgb(33, 55, 67);
+        }
     </style>
 </head>
 <body>
     <h1>Mines</h1>
     <div id="ip">
         <form>
-        Matrix: <select id="matrix" size="1"><option value="3">3</option><option value="4">4</option></select> Mines: <select id="mines" size="1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select> <br><br>
+        Matrix: <select id="matrix" size="1"><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>  Mines: <select id="mines" size="1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select> <br><br>
         <button id="submit">Go</button>
         </form>
     </div><br><br>
